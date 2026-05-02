@@ -1,0 +1,55 @@
+/* Shared chart card styles */
+
+.chart-card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, var(--bg-card), var(--bg-card-hover));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 4px 24px rgba(0,0,0,0.3);
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.chart-card:hover {
+  border-color: var(--border-bright);
+}
+
+/* ── Recharts axis / grid overrides ─────────────────────── */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgba(99,120,220,0.1) !important;
+}
+
+.recharts-text {
+  fill: var(--text-muted) !important;
+}
+
+.recharts-legend-item-text {
+  color: var(--text-secondary) !important;
+}
+
+/* ── Custom tooltip ──────────────────────────────────────── */
+.chart-tooltip {
+  background: linear-gradient(145deg, #1a2038, #1e2546);
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-size: 0.84rem;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(100,136,255,0.1);
+  min-width: 140px;
+}
+
+.chart-tooltip-label {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.chart-tooltip-value {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 1rem;
+}

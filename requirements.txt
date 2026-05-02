@@ -1,0 +1,13 @@
+# ── Core dependencies ──────────────────────────────────────────────────────
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9
+pandas>=2.0.0
+textblob>=0.18.0
+python-dotenv>=1.0.0
+
+# ── Optional: LLM-based classification (USE_LLM=true) ─────────────────────
+openai>=1.25.0        # only required when USE_LLM=true
+
+# ── Convenience ────────────────────────────────────────────────────────────
+openpyxl>=3.1.0       # for reading Excel files if needed later

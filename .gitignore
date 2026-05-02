@@ -1,0 +1,16 @@
+# .gitignore for RIAS
+.env
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+.venv/
+venv/
+*.csv
+!data/sample_reviews.csv
+
+# Frontend
+node_modules/
+frontend/dist/
+frontend/build/
+*.local

@@ -1,0 +1,174 @@
+.review-table-section { display: flex; flex-direction: column; gap: 18px; }
+
+.rt-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rt-count {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  padding: 4px 14px;
+}
+
+/* ── Filters ──────────────────────────────────────────────── */
+.rt-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+  background: linear-gradient(145deg, var(--bg-card), var(--bg-card-hover));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.rt-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.rt-filter-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.rt-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.rt-pill {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  color: var(--text-secondary);
+  padding: 6px 18px;
+  font-size: 0.84rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.18s var(--ease);
+}
+.rt-pill:hover {
+  border-color: var(--border-bright);
+  color: var(--text-primary);
+  background: var(--bg-card-hover);
+}
+.rt-pill--active {
+  background: var(--blue-dim);
+  border-color: rgba(100,136,255,0.5);
+  color: var(--blue-bright);
+  box-shadow: 0 0 12px rgba(100,136,255,0.15);
+}
+
+.rt-select {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  padding: 7px 14px;
+  font-size: 0.84rem;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235a6a8a' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 34px;
+}
+.rt-select option { background: #1a2038; }
+.rt-select:focus { border-color: var(--blue); }
+
+/* ── Table ────────────────────────────────────────────────── */
+.rt-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+.rt-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.rt-table thead tr {
+  background: linear-gradient(90deg, var(--bg-card), var(--bg-card-hover));
+  border-bottom: 1px solid var(--border-bright);
+}
+
+.rt-table th {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.rt-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+.rt-table tbody tr:last-child { border-bottom: none; }
+.rt-table tbody tr:hover { background: rgba(100,136,255,0.05); }
+
+.rt-table td {
+  padding: 13px 16px;
+  color: var(--text-secondary);
+  vertical-align: top;
+}
+
+.rt-num    { color: var(--text-muted); font-size: 0.74rem; width: 36px; }
+.rt-review { color: var(--text-primary); max-width: 480px; line-height: 1.55; }
+.rt-score  {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  color: var(--text-muted);
+}
+.rt-cat    { white-space: nowrap; color: var(--blue-bright); font-weight: 500; }
+.rt-date   { white-space: nowrap; font-size: 0.78rem; }
+.rt-rating { white-space: nowrap; font-size: 0.82rem; }
+
+/* ── Pagination ───────────────────────────────────────────── */
+.rt-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.rt-page-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  padding: 8px 20px;
+  font-size: 0.83rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+.rt-page-btn:hover:not(:disabled) {
+  border-color: var(--blue);
+  color: var(--blue-bright);
+  background: var(--blue-dim);
+}
+.rt-page-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.rt-page-info { font-size: 0.82rem; color: var(--text-muted); }
