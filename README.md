@@ -4,7 +4,7 @@
 
 ---
 
-## ✨ Features
+## Features
 
 - **CSV / Excel Upload** — Drag-and-drop review ingestion with instant processing
 - **Sentiment Analysis** — TextBlob-powered polarity scoring (positive / neutral / negative)
@@ -17,7 +17,7 @@
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```
 rias/
@@ -65,7 +65,7 @@ rias/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -123,7 +123,7 @@ The dashboard will be available at **http://localhost:5173**
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 ```
 CSV/Excel Upload
@@ -149,7 +149,7 @@ CSV/Excel Upload
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -164,13 +164,13 @@ CSV/Excel Upload
 
 ---
 
-## 📊 Sample Data
+## Sample Data
 
 A demo dataset (`data/sample_reviews.csv`) is included so you can explore the dashboard immediately without uploading your own data.
 
 ---
 
-## 📄 License
+## License
 
 MIT — feel free to use, modify, and distribute.
 
